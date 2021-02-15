@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="758.0"
+      prefWidth="979.0" fx:controller="com.calculator_gui.Controller" style="-fx-background-color: #282C34;"
+      xmlns:fx="http://javafx.com/fxml">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="1920">
+        <menus>
+          <Menu mnemonicParsing="false" text="Calculator">
+<!--            <items>-->
+<!--              <MenuItem mnemonicParsing="false" text="Close" />-->
+<!--            </items>-->
+          </Menu>
+          <Menu mnemonicParsing="false" text="Conversions">
+<!--            <items>-->
+<!--              <MenuItem mnemonicParsing="false" text="Delete" />-->
+<!--            </items>-->
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+<!--            <items>-->
+<!--              <MenuItem mnemonicParsing="false" text="About" />-->
+<!--            </items>-->
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text fill="#f57a0f" layoutX="14.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expression Calculator">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
