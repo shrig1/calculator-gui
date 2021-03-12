@@ -5,3 +5,4 @@ target/
 calculator-gui.iml
 .idea/
 hellofx.iml
+out/

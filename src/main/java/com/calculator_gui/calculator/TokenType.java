@@ -1,0 +1,23 @@
+package com.calculator_gui.calculator;
+
+public enum TokenType {
+    // Groupings
+    LEFT_PAREN, RIGHT_PAREN, ABS_BRACK,
+    // Arithmetic Operators
+    MINUS, PLUS, SLASH, STAR, MODULO, EXP, FACTORIAL,
+
+    EQUAL,
+    // Values
+    NUMBER, PI, E, PHI, ANS,
+
+    // Misc.
+    EOL, COMMA, VARIABLE, ARG,
+
+    //Functions
+    SQRT, ROOT, LOG, LN,
+    SIN, SINH, COS, COSH, TAN, TANH, CSC, CSCH, SEC, SECH, COT, COTH, ARCSIN, ARCSINH, ARCCOS, ARCCOSH, ARCTAN, ARCTANH, ARCCSC, ARCCSCH, ARCSEC, ARCSECH, ARCCOT, ARCCOTH,
+    VER, VCS, CVS, CVC, SEM, HVC, HCV, HCC, EXS, EXC, CRD,
+    NORMALPDF, NORMALCDF, BINOMIALPDF, BINOMIALCDF, INVNORM,
+
+    IMPORT
+}
