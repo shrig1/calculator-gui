@@ -12,42 +12,32 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.Controller">
    <top>
-      <MenuBar fx:id="navigation" BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="Calculators">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Expression Evaluator" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Settings">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Theme" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+       <MenuBar fx:id="navigation" BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="Calculators">
+               <MenuItem mnemonicParsing="false" text="Expression Evaluator" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Settings">
+               <MenuItem mnemonicParsing="false" text="Theme" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Help">
+               <MenuItem mnemonicParsing="false" text="About" />
+           </Menu>
+       </MenuBar>
    </top>
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282C34;" BorderPane.alignment="CENTER">
-         <children>
-            <Text id="Screen-EE-Title" fill="#f87400" fontSmoothingType="LCD" layoutX="100.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expression Evaluator">
-               <font>
+       <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282C34;" BorderPane.alignment="CENTER">
+           <Text id="Screen-EE-Title" fill="#f87400" fontSmoothingType="LCD" layoutX="100.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expression Evaluator">
+              <font>
                   <Font size="48.0" />
-               </font>
-            </Text>
-            <TextField fx:id="input" layoutX="47.0" layoutY="84.0" prefHeight="25.0" prefWidth="486.0" promptText="Enter Expression" />
-            <Text id="Answer-Label" fx:id="answer" fill="#f87400" layoutX="47.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0">
-               <font>
+              </font>
+           </Text>
+           <TextField fx:id="input" layoutX="47.0" layoutY="84.0" onKeyPressed="#enterCalculations" prefHeight="25.0" prefWidth="486.0" promptText="Enter Expression" />
+           <Text id="Answer-Label" fx:id="answer" boundsType="VISUAL" fill="#f87400" layoutX="47.0" layoutY="137.0" stroke="#f87400" strokeType="OUTSIDE" strokeWidth="0.0">
+              <font>
                   <Font size="18.0" />
-               </font>
-            </Text>
-            <Button fx:id="calculate" layoutX="533.0" layoutY="84.0" mnemonicParsing="false" onAction="#calculation" text="Calculate" />
-         </children>
-      </Pane>
+              </font>
+           </Text>
+           <Button fx:id="calculate" layoutX="533.0" layoutY="84.0" mnemonicParsing="false" onAction="#calculation" text="Calculate" />
+       </Pane>
    </center>
 </BorderPane>

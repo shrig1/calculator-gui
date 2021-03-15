@@ -15,7 +15,7 @@ public class Calculator extends Application {
         primaryStage.setTitle("Calculator");
         primaryStage.setScene(new Scene(root, 671, 554));
         primaryStage.show();
-        primaryStage.getIcons().add(new Image("U:\\Repos\\calculator-gui\\src\\main\\resources\\icons\\f(x).jpg"));
+        primaryStage.getIcons().add(new Image(String.valueOf(Calculator.class.getClassLoader().getResource("f(x).jpg"))));
 
     }
 

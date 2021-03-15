@@ -186,7 +186,7 @@ public class Parser {
     }
 
     /**
-     *assignment :>
+     *assignment :> ( variable = expression ) | expression ;
      */
     private Expression assignment() throws IOException {
         if(match(VARIABLE)){
