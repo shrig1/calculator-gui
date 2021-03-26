@@ -2,10 +2,9 @@ package com.calculator_gui.calculator;
 
 import java.io.*;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Environment {
-    public Map<String, Double> variables = new HashMap<>();
+    public HashMap<String, Double> variables = new HashMap<>();
     private double previous_result;
     public boolean ret;
 

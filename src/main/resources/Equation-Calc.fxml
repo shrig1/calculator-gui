@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.calculator_gui.Controller"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.EqtnCalcController">
+    <top>
+        <MenuBar fx:id="navigation" BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="Calculators">
+                <MenuItem mnemonicParsing="false" text="Expression Evaluator" onAction="#openExprScreen"/>
+                <MenuItem mnemonicParsing="false" text="Equation Solver" />
+            </Menu>
+<!--            <Menu mnemonicParsing="false" text="Settings">-->
+<!--                <MenuItem mnemonicParsing="false" text="Theme" />-->
+<!--            </Menu>-->
+            <Menu mnemonicParsing="false" text="Help">
+                <MenuItem mnemonicParsing="false" text="About" onAction="#openAboutScreen"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282C34;" BorderPane.alignment="CENTER">
+            <Text id="Screen-EE-Title" fill="#f87400" fontSmoothingType="LCD" layoutX="170.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equation Solver">
+                <font>
+                    <Font size="48.0" />
+                </font>
+            </Text>
+            <TextField fx:id="input" layoutX="47.0" layoutY="84.0" prefHeight="25.0" onKeyPressed="#enterCalculations" prefWidth="486.0" promptText="Enter Equation" />
+            <Text id="Answer-Label" fx:id="answer" fill="#f87400" layoutX="47.0" layoutY="137.0" stroke="#f87400" strokeType="OUTSIDE" strokeWidth="0.0">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Text>
+            <Button fx:id="calculate" layoutX="533.0" layoutY="84.0" mnemonicParsing="false" text="Solve" />
+            <Text fx:id="variables_list" fill="#f87400" layoutX="47.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Text>
+         <Text fill="#f87400" layoutX="47.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note: Doesn't actually solve equations, it is the same thing as Expression Evaluator" />
+        </Pane>
+    </center>
+</BorderPane>

@@ -1,49 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Scene?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <scene>
-        <Scene>
-            <AnchorPane prefHeight="573.0" prefWidth="802.0">
-            <children>
-               <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculator">
-                  <font>
-                     <Font name="Comic Sans MS" size="20.0" />
-                  </font>
-               </Text>
-               <Text layoutX="14.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thanks for using this calculator. Head on over to">
-                  <font>
-                     <Font name="Comic Sans MS" size="14.0" />
-                  </font>
-               </Text>
-               <MenuBar layoutY="2.0" prefHeight="22.0" prefWidth="805.0">
-                 <menus>
-                   <Menu mnemonicParsing="false" text="File">
-                     <items>
-                       <MenuItem mnemonicParsing="false" text="Close" />
-                     </items>
-                   </Menu>
-                   <Menu mnemonicParsing="false" text="Edit">
-                     <items>
-                       <MenuItem mnemonicParsing="false" text="Delete" />
-                     </items>
-                   </Menu>
-                   <Menu mnemonicParsing="false" text="Help">
-                     <items>
-                       <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                   </Menu>
-                 </menus>
-               </MenuBar>
-            </children></AnchorPane>
-        </Scene>
-    </scene>
-</Stage>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.AboutController">
+    <top>
+        <MenuBar fx:id="navigation" BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="Calculators">
+                <MenuItem mnemonicParsing="false" text="Expression Evaluator" onAction="#openExprScreen"/>
+                <MenuItem mnemonicParsing="false" text="Equation Solver" onAction="#openEqtnScreen"/>
+            </Menu>
+<!--            <Menu mnemonicParsing="false" text="Settings">-->
+<!--                <MenuItem mnemonicParsing="false" text="Theme" />-->
+<!--            </Menu>-->
+            <Menu mnemonicParsing="false" text="Help">
+                <MenuItem mnemonicParsing="false" text="About" />
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282C34;" BorderPane.alignment="CENTER">
+            <Text fill="#f87400" layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculator">
+                <font>
+                    <Font name="Comic Sans MS" size="20.0" />
+                </font>
+            </Text>
+            <Text fill="#f87400" layoutX="14.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thanks for using this calculator! Head on over to https://github.com/clubpenguin420/calculator-gui to get the source code and feel free to star the repo to show your appreciation!" wrappingWidth="658.27734375">
+                <font>
+                    <Font name="Comic Sans MS" size="14.0" />
+                </font>
+            </Text>
+        </Pane>
+    </center>
+</BorderPane>
