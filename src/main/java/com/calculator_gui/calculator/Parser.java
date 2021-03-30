@@ -76,6 +76,13 @@ public class Parser {
             }
             return new Expression.Null();
         }
+        if(match(REMOVE)) {
+            consume(LEFT_PAREN);
+            String name = String.valueOf(advance().getLexme());
+            consume(RIGHT_PAREN);
+            env.removeVar(name);
+            return new Expression.Null();
+        }
         throw new Error("Not a valid expression :(");
     }
 

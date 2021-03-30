@@ -57,6 +57,7 @@ public class Lexer {
         functions.put("invnorm", INVNORM);
 
         functions.put("import", IMPORT);
+        functions.put("remove", REMOVE);
         functions.put("pi", PI);
         functions.put("phi", PHI);
         functions.put("e", E);

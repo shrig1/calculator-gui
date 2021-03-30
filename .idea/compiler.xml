@@ -16,11 +16,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="calculator-gui" />
+        <module name="hellofx" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="15">
       <module name="calculator-gui" target="15" />
+      <module name="hellofx" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>

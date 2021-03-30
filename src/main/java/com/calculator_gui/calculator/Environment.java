@@ -18,6 +18,10 @@ public class Environment {
     }
 
 
+    public void removeVar(String var_name) {
+        variables.remove(var_name);
+    }
+
 
     public void importVariablesFromFile(String path, boolean override) throws IOException {
         BufferedReader reader = new BufferedReader( new FileReader(path) );
