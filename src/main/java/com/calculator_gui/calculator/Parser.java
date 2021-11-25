@@ -143,7 +143,7 @@ public class Parser {
     }
 
     /**
-     * power :>  negate [ ( '^' ) negate ] ;
+     * power :>  negate [ ( '^' ) power ] ;
      */
     private Expression power() throws IOException {
         Expression expr = negate();

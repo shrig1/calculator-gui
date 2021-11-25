@@ -1,7 +1,7 @@
 package com.calculator_gui;
 
+import com.calculator_gui.controllers.*;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,15 +14,25 @@ public class Calculator extends Application {
     FXMLLoader exprCalcScreenLoader = new FXMLLoader(Calculator.class.getClassLoader().getResource("Expression-Calc.fxml"));
     FXMLLoader eqtnCalcScreenLoader = new FXMLLoader(Calculator.class.getClassLoader().getResource("Equation-Calc.fxml"));
     FXMLLoader aboutScreenLoader = new FXMLLoader(Calculator.class.getClassLoader().getResource("About.fxml"));
+    FXMLLoader graphingScreenLoader = new FXMLLoader(Calculator.class.getClassLoader().getResource("Graphing.fxml"));
+    FXMLLoader statsScreenLoader = new FXMLLoader(Calculator.class.getClassLoader().getResource("Statistics.fxml"));
     Parent exprParent;
     Parent eqtnParent;
     Parent aboutParent;
+    Parent graphingParent;
+    Parent statsParent;
     Scene exprScene;
     Scene eqtnScene;
     Scene aboutScene;
+    Scene graphingScene;
+    Scene statsScene;
     ExprCalcController exprScreenController;
     EqtnCalcController eqtnScreenController;
     AboutController abtScreenController;
+    GraphingCalcController graphScreenController;
+    StatCalcController statScreenController;
+
+
 
 
 
@@ -36,6 +46,7 @@ public class Calculator extends Application {
     }
 
     public void initialize() throws IOException {
+
         exprParent = exprCalcScreenLoader.load();
         exprScene = new Scene(exprParent, 671, 554);
         exprScreenController = exprCalcScreenLoader.getController();
@@ -48,12 +59,34 @@ public class Calculator extends Application {
         aboutScene = new Scene(aboutParent, 671, 554);
         abtScreenController = aboutScreenLoader.getController();
 
+        graphingParent = graphingScreenLoader.load();
+        graphingScene = new Scene(graphingParent, 771, 654);
+        graphScreenController = graphingScreenLoader.getController();
+
+        statsParent = statsScreenLoader.load();
+        statsScene = new Scene(statsParent, 871, 754);
+        statScreenController = statsScreenLoader.getController();
+
         exprScreenController.setEqtnScreen(eqtnScene);
         exprScreenController.setAboutScreen(aboutScene);
+        exprScreenController.setGraphScreen(graphingScene);
+        exprScreenController.setStatScreen(statsScene);
         eqtnScreenController.setExprScreen(exprScene);
         eqtnScreenController.setAboutScreen(aboutScene);
+        eqtnScreenController.setGraphScreen(graphingScene);
+        eqtnScreenController.setStatScreen(statsScene);
         abtScreenController.setExprScreen(exprScene);
         abtScreenController.setEqtnScreen(eqtnScene);
+        abtScreenController.setGraphScreen(graphingScene);
+        abtScreenController.setStatScreen(statsScene);
+        graphScreenController.setExprScreen(exprScene);
+        graphScreenController.setEqtnScreen(eqtnScene);
+        graphScreenController.setAboutScreen(aboutScene);
+        graphScreenController.setStatScreen(statsScene);
+        statScreenController.setExprScreen(exprScene);
+        statScreenController.setEqtnScreen(eqtnScene);
+        statScreenController.setGraphScreen(graphingScene);
+        statScreenController.setAboutScreen(aboutScene);
     }
 
 

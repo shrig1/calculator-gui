@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.controllers.StatCalcController">
+    <top>
+        <MenuBar fx:id="navigation" BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="Calculators">
+                <MenuItem mnemonicParsing="false" onAction="#openExprScreen" text="Expression Evaluator" />
+                <MenuItem mnemonicParsing="false" onAction="#openEqtnScreen" text="Equation Solver" />
+                <MenuItem mnemonicParsing="false" onAction="#openGraphScreen" text="Graphing Calculator" />
+                <MenuItem mnemonicParsing="false" text="Statistics Calculator" />
+            </Menu>
+            <!--            <Menu mnemonicParsing="false" text="Settings">-->
+            <!--                <MenuItem mnemonicParsing="false" text="Theme" />-->
+            <!--            </Menu>-->
+            <Menu mnemonicParsing="false" text="Help">
+                <MenuItem mnemonicParsing="false" onAction="#openAboutScreen" text="About" />
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane prefHeight="468.0" prefWidth="603.0" style="-fx-background-color: #282C34;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#f87400" layoutX="230.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics Calculator">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <Text fill="#f87400" layoutX="15.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linear regression w/ x-y data" wrappingWidth="337.25">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="LinRegXCoords" layoutX="14.0" layoutY="151.0" prefHeight="25.0" prefWidth="404.0" promptText="Enter x coordinates here(Ex. x1, x2, etc.)" />
+            <TextField fx:id="LinRegTitle" layoutX="14.0" layoutY="229.0" prefHeight="25.0" prefWidth="404.0" promptText="Enter Title of Graph(&quot;LinReg&quot; if left blank)" />
+            <Text fill="#f87400" layoutX="450.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linear regression w/ mean-std data" wrappingWidth="380.25">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="LinRegXMean" layoutX="450.0" layoutY="151.0" prefHeight="25.0" prefWidth="125.0" promptText="Enter x-mean" />
+            <TextField fx:id="LinRegYMean" layoutX="450.0" layoutY="194.0" prefHeight="25.0" prefWidth="125.0" promptText="Enter y-mean" />
+            <TextField fx:id="LinRegXSTD" layoutX="591.0" layoutY="151.0" prefHeight="25.0" prefWidth="125.0" promptText="Enter x-std" />
+            <TextField fx:id="LinRegYSTD" layoutX="591.0" layoutY="194.0" prefHeight="25.0" prefWidth="125.0" promptText="Enter y-std" />
+            <TextField fx:id="LinRegRCoeff" layoutX="727.0" layoutY="151.0" prefHeight="25.0" prefWidth="103.0" promptText="Enter r-coeff" />
+            <Button fx:id="LinRegXYBtn" layoutX="178.0" layoutY="266.0" mnemonicParsing="false" onAction="#linRegXY" prefHeight="29.0" prefWidth="75.0" text="Plot Chart" />
+            <Button fx:id="LinRegMeSdBtn" layoutX="727.0" layoutY="194.0" mnemonicParsing="false" onAction="#linRegData" prefHeight="19.0" prefWidth="103.0" text="Plot Chart" />
+            <TextField fx:id="LinRegYCoords" layoutX="14.0" layoutY="188.0" prefHeight="25.0" prefWidth="404.0" promptText="Enter y coordinates here(Ex. y1, y2, etc.)" />
+         </children></Pane>
+    </center>
+</BorderPane>

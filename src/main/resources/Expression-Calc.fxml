@@ -14,12 +14,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.ExprCalcController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.controllers.ExprCalcController">
    <top>
        <MenuBar fx:id="navigation" BorderPane.alignment="CENTER">
            <Menu mnemonicParsing="false" text="Calculators">
                <MenuItem mnemonicParsing="false" text="Expression Evaluator" />
                <MenuItem mnemonicParsing="false" text="Equation Solver" onAction="#openEqtnScreen"/>
+               <MenuItem mnemonicParsing="false" text="Graphing Calculator" onAction="#openGraphScreen"/>
+               <MenuItem mnemonicParsing="false" onAction="#openStatScreen" text="Statistics Calculator" />
            </Menu>
 <!--           <Menu mnemonicParsing="false" text="Settings">-->
 <!--               <MenuItem mnemonicParsing="false" text="Theme" />-->
@@ -45,15 +47,13 @@
            <Button fx:id="calculate" layoutX="533.0" layoutY="84.0" mnemonicParsing="false" onAction="#calculation" text="Calculate" />
          <Accordion layoutX="47.0" layoutY="281.0">
            <panes>
-             <TitledPane animated="false" prefHeight="206.0" prefWidth="483.0" text="Variables">
-               <content>
-                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #282C34;">
-                        <children>
-                           <TextArea fx:id="variables_list" prefHeight="181.0" prefWidth="482.0" style="-fx-background-color: #282C34;" />
-                        </children>
-                     </AnchorPane>
-               </content>
-             </TitledPane>
+               <TitledPane animated="false" prefHeight="206.0" prefWidth="483.0" text="Variables">
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"
+                               style="-fx-background-color: #282C34;">
+                       <TextArea fx:id="variables_list" prefHeight="181.0" prefWidth="482.0"
+                                 style="-fx-background-color: #282C34;"/>
+                   </AnchorPane>
+               </TitledPane>
            </panes>
          </Accordion>
        </Pane>

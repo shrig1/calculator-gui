@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.controllers.GraphingCalcController">
+        <top>
+            <MenuBar fx:id="navigation" BorderPane.alignment="CENTER">
+                <Menu mnemonicParsing="false" text="Calculators">
+                    <MenuItem mnemonicParsing="false" onAction="#openExprScreen" text="Expression Evaluator" />
+                    <MenuItem mnemonicParsing="false" onAction="#openEqtnScreen" text="Equation Solver" />
+                    <MenuItem mnemonicParsing="false" text="Graphing Calculator" />
+                    <MenuItem mnemonicParsing="false" onAction="#openStatScreen" text="Statistics Calculator" />
+                </Menu>
+                <!--            <Menu mnemonicParsing="false" text="Settings">-->
+                <!--                <MenuItem mnemonicParsing="false" text="Theme" />-->
+                <!--            </Menu>-->
+                <Menu mnemonicParsing="false" text="Help">
+                    <MenuItem mnemonicParsing="false" onAction="#openAboutScreen" text="About" />
+                </Menu>
+            </MenuBar>
+        </top>
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282C34;" BorderPane.alignment="CENTER">
+
+        </Pane>
+    </center>
+</BorderPane>

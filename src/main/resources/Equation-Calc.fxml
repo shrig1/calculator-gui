@@ -10,12 +10,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.EqtnCalcController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator_gui.controllers.EqtnCalcController">
     <top>
         <MenuBar fx:id="navigation" BorderPane.alignment="CENTER">
             <Menu mnemonicParsing="false" text="Calculators">
                 <MenuItem mnemonicParsing="false" text="Expression Evaluator" onAction="#openExprScreen"/>
                 <MenuItem mnemonicParsing="false" text="Equation Solver" />
+                <MenuItem mnemonicParsing="false" text="Graphing Calculator" onAction="#openGraphScreen"/>
+                <MenuItem mnemonicParsing="false" onAction="#openStatScreen" text="Statistics Calculator" />
             </Menu>
 <!--            <Menu mnemonicParsing="false" text="Settings">-->
 <!--                <MenuItem mnemonicParsing="false" text="Theme" />-->

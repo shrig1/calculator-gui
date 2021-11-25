@@ -20,7 +20,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="15">
-      <module name="calculator-gui" target="15" />
       <module name="hellofx" target="15" />
     </bytecodeTargetLevel>
   </component>

@@ -1,13 +1,11 @@
-package com.calculator_gui;
+package com.calculator_gui.controllers;
 
 import com.calculator_gui.calculator.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -15,23 +13,24 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
-public class ExprCalcController {
+// Right now there is nothing different from this screen and the ExprCalc screen, except there is no Real Time Variables Viewer
+public class EqtnCalcController {
     Environment env = new Environment();
     Lexer lexer;
     Parser parser;
     Evaluator solver;
 
-    Scene eqtnScreen;
+    Scene exprScreen;
     Scene aboutScreen;
+    Scene graphScreen;
+    Scene statScreen;
 
     @FXML private TextField input;
     @FXML private Button calculate;
     @FXML private Text answer;
     @FXML private MenuBar navigation;
-    @FXML TextArea variables_list;
+    @FXML Text variables_list;
 
     @FXML protected void calculation() {
         String expr = input.getText();
@@ -49,14 +48,13 @@ public class ExprCalcController {
             if(env.ret) {
                 answer.setText(String.valueOf(value));
             }
-//            else {
-//                answer.setText(expr);
-//            }
+            else {
+                answer.setText(expr);
+            }
         } catch (Exception e) {
 //            System.out.println(e.getMessage());
-            answer.setText(e.getMessage());
+            answer.setText("Not a valid expression :(");
         }
-        updateVarsList();
     }
 
     @FXML protected void enterCalculations(KeyEvent event) {
@@ -65,25 +63,29 @@ public class ExprCalcController {
         }
     }
 
-    private void updateVarsList() {
-        StringBuilder list = new StringBuilder();
-        for(Map.Entry<String, Double> var : env.variables.entrySet()) {
-            list.append(var.getKey()).append(" = ").append(var.getValue()).append("\n");
-        }
-        variables_list.setText(list.toString());
-    }
-
-    public void setEqtnScreen(Scene s) { eqtnScreen = s; }
-
+    //------- Navigation shit ----------
+    public void setExprScreen(Scene s) { exprScreen = s; }
     public void setAboutScreen(Scene s) { aboutScreen = s; }
+    public void setGraphScreen(Scene s) { graphScreen = s; }
+    public void setStatScreen(Scene s) { statScreen = s; }
 
-    @FXML private void openEqtnScreen(ActionEvent e) {
+    @FXML private void openExprScreen(ActionEvent e) {
         Stage primaryStage = (Stage)navigation.getScene().getWindow();
-        primaryStage.setScene(eqtnScreen);
+        primaryStage.setScene(exprScreen);
     }
 
     @FXML private void openAboutScreen(ActionEvent e) {
         Stage primaryStage = (Stage)navigation.getScene().getWindow();
         primaryStage.setScene(aboutScreen);
+    }
+
+    @FXML private void openGraphScreen(ActionEvent e) {
+        Stage primaryStage = (Stage)navigation.getScene().getWindow();
+        primaryStage.setScene(graphScreen);
+    }
+
+    @FXML private void openStatScreen(ActionEvent e) {
+        Stage primaryStage = (Stage)navigation.getScene().getWindow();
+        primaryStage.setScene(statScreen);
     }
 }
