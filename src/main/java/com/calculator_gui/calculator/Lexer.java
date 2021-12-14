@@ -55,6 +55,10 @@ public class Lexer {
         functions.put("binomialpdf", BINOMIALPDF);
         functions.put("binomialcdf", BINOMIALCDF);
         functions.put("invnorm", INVNORM);
+        functions.put("sort", SORT);
+        functions.put("base", BASE);
+        functions.put("union", UNION);
+        functions.put("diff", DIFF);
 
         functions.put("import", IMPORT);
         functions.put("remove", REMOVE);
